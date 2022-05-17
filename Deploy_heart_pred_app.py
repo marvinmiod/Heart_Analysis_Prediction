@@ -34,7 +34,6 @@ with open(PKL_NAME, 'rb') as file:
 
 heart_attack_chance = {0: 'Negative', 1: 'Positive'}
 
-#%% Deployment
 
 #%% Deployment
 
@@ -48,7 +47,7 @@ heart_attack_chance = {0: 'Negative', 1: 'Positive'}
 #print(heart_attack_chance[np.argmax(outcome)])
 
 
-#%% build app using streamlit
+#%% build app using streamlit to take in input from the webpage
 
 #age','sex','cp','trtbps','chol','fbs','restecg','thalachh','exng','oldpeak',
 #'slp','caa','thall','output
