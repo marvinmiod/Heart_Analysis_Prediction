@@ -23,43 +23,23 @@ import os
 import pickle
 import missingno as msno
 import math
-
 from sklearn.preprocessing import MinMaxScaler, StandardScaler
 from sklearn.pipeline import Pipeline
 from sklearn.linear_model import LinearRegression, Ridge, LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.pipeline import Pipeline
-from sklearn.linear_model import Lasso
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
-from sklearn.experimental import enable_iterative_imputer
-from sklearn.impute import IterativeImputer
 from sklearn.decomposition import PCA
 from sklearn.svm import SVC
 from sklearn.neighbors import KNeighborsClassifier
 
-
-
-
-#----- to remove below
-from tensorflow.keras.callbacks import EarlyStopping
-from tensorflow.keras.callbacks import TensorBoard
-from tensorflow.keras.models import Sequential #model is only for Sequential Model
-from tensorflow.keras.layers import Dropout, Dense,  LSTM
-from tensorflow.keras.layers import Embedding, Bidirectional
-from tensorflow.keras import Input, Model
-from tensorflow.keras.layers import Flatten
-from tensorflow.keras.layers import BatchNormalization # to add after hidden layer
-from tensorflow.keras.utils import plot_model
 from sklearn.metrics import confusion_matrix, classification_report
 from sklearn.metrics import ConfusionMatrixDisplay
-from sklearn.preprocessing import OneHotEncoder
+
 import matplotlib.pyplot as plt
 import seaborn as sns
-import json
-from tensorflow.keras.preprocessing.text import Tokenizer
-from tensorflow.keras.preprocessing.sequence import pad_sequences
+
 
 
 #%%
@@ -131,35 +111,6 @@ y_target = dummy_df['output']
 #%% # Step 5) Data Pre-processing 
 # using ML pipeline to determine which scaling to use
 
-
-#%% Data 
-"""
-#identify x,y train and test data
-
-x_train,x_test,y_train,y_test = train_test_split(x_features, y_target, test_size=0.3,
-                                                 random_state=12)
-
-steps_LR = [('Linear Regression', LinearRegression())]
-steps_RD = [('Ridge', Ridge())]
-steps_tree = [('Tree', DecisionTreeClassifier())]
-steps_forest = [('Forest', RandomForestClassifier())]
-
-#load steps into pipeline
-# to load steps into pipeline
-pipeline_lr = Pipeline(steps_LR) 
-pipeline_rd = Pipeline(steps_RD) 
-pipeline_tree = Pipeline(steps_tree) 
-pipeline_forest = Pipeline(steps_forest) 
-
-pipelines = [pipeline_lr, pipeline_rd, pipeline_tree, pipeline_forest ] 
-
-for pipe in pipelines:
-    pipe.fit(x_train,y_train) 
-
-pipe_dict_model = { 0:'Linear Regression', 1: 'Ridge', 2: 'Tree', 
-                   3: 'Forest'} 
-
-"""    
 
 #%%# Machine Learning Pipeline
 
