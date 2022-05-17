@@ -28,6 +28,8 @@ The accuracy of the model is 83.5% using the Logistic Regresssion with Principal
 
 
 
+
+
 Below image is a Confusion Matrix which shows the predicted model that was feed with test data (91 dataset) and how many dataset that are predicted correctly with 1 or 0 output. 
 
 (output of 0: 36 out of 46 predicted correctly)
