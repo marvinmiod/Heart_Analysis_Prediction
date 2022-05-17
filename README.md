@@ -17,4 +17,4 @@ https://www.kaggle.com/rashikrahmanpritom/heart-attack-analysis-prediction-datas
 
 # Images
 
-![image](static/image/heart_model_accuracy.png)
+![image](static/heart_model_accuracy.png)
