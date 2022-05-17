@@ -17,4 +17,8 @@ https://www.kaggle.com/rashikrahmanpritom/heart-attack-analysis-prediction-datas
 
 # Images
 
+The best model that was selected is Logistic Regression based on the Machine Learning Pipeline.
+The accuracy of the model is 83.5 using the Logistic Regresssion
+
 ![image](image/heart_model_accuracy.png)
+
