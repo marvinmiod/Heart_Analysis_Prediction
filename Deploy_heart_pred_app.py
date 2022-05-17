@@ -99,16 +99,15 @@ with st.form('Heart Attack Analysus Prediction Form'):
     submitted = st.form_submit_button('Submit')
     
     if submitted == True:
-        # to take in user input for the 4 features, age, pregnancy, glucose and BMI
-        patient_info = np.array([age,sex,cp,trtbps])
+        # take user input from the form as 13 features
+        patient_info = np.array([age,sex,cp,trtbps,chol,fbs,restecg,
+                                 thalachh,exng,oldpeak,slp,caa,thall])
         patient_info_ex = np.expand_dims(patient_info, axis=0)
        
         outcome = model.predict(patient_info_ex)
         #print out the outcome in the form using write function
         st.write(heart_attack_chance[np.argmax(outcome)])
             
-        #st.write([age,pregnancies,glucose,bmi])
-        #model.predict()
         
         if np.argmax(outcome)==1:
             st.warning("""You have higher change to have heart attack, \n
@@ -121,7 +120,7 @@ with st.form('Heart Attack Analysus Prediction Form'):
 
 # to deploy need to run the script below in the tf_env where the .py file is stored
 # streamlit run Deploy_model_diabetes.py
-# (tf_env) C:\<path of the saved deploy_heart_pred_app.py file>streamlit run Deploy_model_diabetes.py
+# (tf_env) C:\<path of the saved deploy_heart_pred_app.py file>streamlit run Deploy_heart_pred_app.py
 
 
 #%%
