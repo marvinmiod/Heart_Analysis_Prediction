@@ -36,22 +36,6 @@ heart_attack_chance = {0: 'Negative', 1: 'Positive'}
 
 #%% Deployment
 
-# example of patient's info being added into prediction model,
-# 4 features selected, pregnancies (2), Glucose(183), age (32), BMI(35.1)
-# below is static input of 4 features
-#patient_info = np.array([2,183,32,35.1]) # test static input
-
-#must define the age,pregnancies,glucose,bmi variable first before can use code
-#patient_info = np.array([age,pregnancies,glucose,bmi])  
-#patient_info_scaled = minmax_scaler.transform(np.expand_dims(patient_info, 
-#                                                             axis=0))
-
-
-#outcome = model.predict(patient_info_scaled)
-#print(np.argmax(outcome))
-
-#print(diabetes_chance[np.argmax(outcome)])
-
 #%% Deployment
 
 # test static data:
