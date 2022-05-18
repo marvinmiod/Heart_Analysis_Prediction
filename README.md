@@ -8,7 +8,7 @@ This is a project to analyse patient's heart related data to determine whether t
 # How to use it
 Clone the repo and run it.
 
-predicted_label.py is a script to train the data
+training_heart.py is a script to train the data
 
 Deploy_heart_pred_app.py is a script for deployment and viewing the app in web browser via Streamlit.
 
